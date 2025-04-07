@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>지오지브라 클래스룸 이동</title>
+  <!--스타일은 상관없음 걍 지피티가 해준거라 나중에 이재원이 해주길 바래야함.-->
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px;
+    }
+    h1 {
+      color: purple;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 30px;
+    }
+    .box {
+      width: 45%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>지오지브라 클래스룸 이동</h1>
+
+  <div class="container">
+    <div class="box">
+      <h2>포물선의 성질 10가지</h2>
+      <a href="https://www.geogebra.org/classroom/yxdehw4m" target="_blank">
+        <button>이동</button>
+      </a>
+    </div>
+
+    <div class="box">
+      <h2>입력</h2>
+      <input type="text" id="codeInput" placeholder="8자리 영문 숫자 조합" maxlength="8">
+      <button onclick="goToClassroom()">이동</button>
+    </div>
+  </div>
+
+  <script>
+    function goToClassroom() {
+      const code = document.getElementById('codeInput').value.trim();
+      const pattern = /^[a-zA-Z0-9]{8}$/;
+      if (pattern.test(code)) {
+        const url = "https://www.geogebra.org/classroom/" + code;
+        window.open(url, "_blank");
+      } else {
+        alert("8자리 영문 및 숫자 조합을 입력하세요.(대소문자 상관 X)");
+      }
+    }
+  </script>
+
+</body>
+</html>
