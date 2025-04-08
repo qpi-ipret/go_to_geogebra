@@ -22,6 +22,12 @@
       width: 80%;
       margin-top: 30px;
     }
+    .contain {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 30px;
+      }
     .box {
       width: 45%;
       padding: 20px;
@@ -45,21 +51,72 @@
 <body>
 
   <h1>지오지브라 클래스룸 이동</h1>
+  <div>
+    <div>
+        <h2>입력</h2>
+        <input type="text" id="codeInput" placeholder="클래스룸 코드" maxlength="8">
+        <button onclick="goToClassroom()">이동</button>
+      </div>
+</div>
 
   <div class="container">
     <div class="box">
-      <h2>포물선의 성질 10가지</h2>
+      <h2 style="font-size: small;">포물선의 성질 10가지</h2>
       <a href="https://www.geogebra.org/classroom/yxdehw4m" target="_blank">
         <button>이동</button>
       </a>
     </div>
 
     <div class="box">
-      <h2>입력</h2>
-      <input type="text" id="codeInput" placeholder="8자리 영문 숫자 조합" maxlength="8">
-      <button onclick="goToClassroom()">이동</button>
+        <h2 style="font-size: small;">이심률을 활용한 이차곡선 작도</h2>
+        <a href="https://www.geogebra.org/classroom/qkvhszwn" target="_blank">
+          <button>이동</button>
+        </a>
+      </div>
+
+      <div class="box">
+        <h2 style="font-size: small;">타원(정의)</h2>
+        <a href="https://www.geogebra.org/classroom/g46c3fj2" target="_blank"></a>
+        <button>이동</button>
+      </div>
+
+      <div class="box">
+        <h2 style="font-size: small;">타원(성질)</h2>
+        <a href="https://www.geogebra.org/classroom/t4ftzzua" target="_blank">
+          <button>이동</button>
+        </a>
+      </div>
+
+      <div class="box">
+        <h2 style="font-size: small;">쌍곡선(정의)</h2>
+        <a href="https://www.geogebra.org/classroom/qupvtprj" target="_blank">
+          <button>이동</button>
+        </a>
+      </div>
+
+      <div class="box">
+        <h2 style="font-size: small;">쌍곡선(성질)</h2>
+        <a href="https://www.geogebra.org/classroom/kgrawj6u" target="_blank">
+          <button>이동</button>
+        </a>
+      </div>
+
+      <div class="box">
+        <h2 style="font-size: small;">이차곡선의 실생활 활용</h2>
+        <a href="https://www.geogebra.org/classroom/etwn6ajb" target="_blank">
+          <button>이동</button>
+        </a>
+      </div>
+
+      <div class="box">
+        <h2 style="font-size: small;">이차 곡선의 접선 작도</h2>
+        <a href="https://www.geogebra.org/classroom/nskwyrns" target="_blank">
+          <button>이동</button>
+        </a>
+      </div>
+
+
     </div>
-  </div>
 
   <script>
     function goToClassroom() {
